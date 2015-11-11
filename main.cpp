@@ -19,5 +19,7 @@ int main()
 	int z = add(x_ptr, y_ptr);
 
 	cout << z << endl;
+
+	return 0;
 }
 
