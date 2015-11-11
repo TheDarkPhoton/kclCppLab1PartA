@@ -4,17 +4,17 @@ using namespace std;
 
 int main()
 {
-	double x = 3.123;
-	cout << x << endl;
+	int x = 6;
+	int y = 4;
+	int quotient = x / y;
 
-	int y = (int) x;
-	cout << y << endl;
+	cout << quotient << endl;
 
-	int sum = 19;
-	int count = 3;
-	/* without a cast, the result of this division would be 6 */
-	double mean = (double) sum / count;
-	cout << mean << endl;
+	double a = 6;
+	double b = 4;
+	double quotient1 = a / b;
+
+	cout << quotient1 << endl;
 
 	return 0;
 }
