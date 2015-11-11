@@ -2,22 +2,20 @@
 
 using namespace std;
 
-int add(int* x, int* y)
-{
-	int sum = *x + *y;
-	return sum;
-}
-
 int main()
 {
-	int x = 1;
-	int* x_ptr = &x;
+	double x = 3.123;
+	cout << x << endl;
 
-	int y = 2;
-	int* y_ptr = &y;
+	int y = (int) x;
+	cout << y << endl;
 
-	int z = add(x_ptr, y_ptr);
+	int sum = 19;
+	int count = 3;
+	/* without a cast, the result of this division would be 6 */
+	double mean = (double) sum / count;
+	cout << mean << endl;
 
-	cout << z << endl;
+	return 0;
 }
 
