@@ -3,6 +3,17 @@
 
 using namespace std;
 
+bool isPalindrome(string word){
+    string wordRev = word;
+    reverse(wordRev.begin(), wordRev.end());
+    return word == wordRev;
+}
+
+string processInput(string command){
+    command.erase(remove_if(command.begin(), command.end(), ::isspace), command.end());
+    return command.substr(1, command.size() - 1);
+}
+
 int main() {
     cout << "Welcome to Palindrome Checker" << endl;
     cout << "Type 'help' to see available commands." << endl;
@@ -16,13 +27,9 @@ int main() {
 
         //if the first character is the question mark then do
         if (command.c_str()[0] == '?'){
-            command.erase(remove_if(command.begin(), command.end(), ::isspace), command.end());
+            string word = processInput(command);
 
-            string word = command.substr(1, command.size() - 1);
-            string wordRev = word;
-            reverse(wordRev.begin(), wordRev.end());
-
-            if (word == wordRev)
+            if (isPalindrome(word))
                 cout << word << " is a palindrome" << endl;
             else
                 cout << word << " is not a palindrome" << endl;
