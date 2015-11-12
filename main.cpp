@@ -68,7 +68,7 @@ int main() {
                 --tries;
 
             string masked_word = masked_word_spaced;
-            masked_word.erase(remove(begin(masked_word), end(masked_word), ::isspace), end(masked_word));
+            masked_word.erase(remove_if(begin(masked_word), end(masked_word), ::isspace), end(masked_word));
 
             if (tries >= 0 && selected_word == masked_word) {
                 cout << "'" << selected_word << "' is the correct word!!!" << endl;
